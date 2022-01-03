@@ -1,0 +1,461 @@
+section#slider_home img.m_banner {
+    width: 100%;
+    top: 191px;
+    left: 0px;
+    width: 1920px;
+
+}
+
+section#slider_home {
+    padding-bottom: 200px;
+    background: url(../assets/home-banner.png) no-repeat #ecfcfc;
+    background-position: bottom center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+section#slider_home {
+    padding-bottom: 0px;
+}
+
+.img-fluid {
+    max-width: 70%;
+    height: auto;
+}
+
+.online_channeling {
+    background-color: #ecfcfc;
+    padding-bottom: 5%;
+}
+
+.line-bar {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    right: -50%;
+}
+
+.online_channeling_heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.online_channeling_heading h1 {
+    text-align: center;
+    font: normal normal normal 40px/48px Lato;
+    letter-spacing: 0px;
+    color: #00A9BE;
+    text-transform: capitalize;
+    opacity: 1;
+    position: relative;
+}
+
+.online_channeling_heading img {
+    float: left;
+    width: 65px;
+    height: 37px;
+    padding-left: 12px;
+    margin-top: 9px;
+}
+
+.online_channeling_element_sec {
+    margin: auto;
+}
+
+.online_channeling_element {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000021;
+    /*box-shadow: 0px 3px 20px #00000021;*/
+    /*border: 2px solid #36C1CC;*/
+    border-radius: 20px;
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+.online_channeling_element:hover {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000021;
+    border: 2px solid #36C1CC;
+    border-radius: 20px;
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+.online_channeling_element_img {
+    width: 87px;
+    height: 114px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.online_channeling_element p {
+    text-align: center;
+    font: normal normal bold 16px/30px Lato;
+    letter-spacing: 0px;
+    color: #585858;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-top: 15px;
+
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.services {
+    background-color: #F1F1F1;
+    height: 67px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.service_list
+.flex_item {
+    width: 25%;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+
+.services:hover {
+    background-color: #36C1CC;
+    color: #EEFEFF;
+}
+
+.services p {
+    padding-top: 8%;
+}
+
+.appointment_service h2 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.appointment_service h6 {
+    margin-left: 1%;
+    padding-bottom: 1%;
+}
+
+.select_doctor {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.custom_div {
+    width: 85%;
+    margin: auto;
+}
+
+.select_doctor h6 {
+    padding-left: 2%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select_doctor
+.flex_item {
+    width: 33.3%;
+    padding: 0 0 15px 0;
+}
+
+.time_slot {
+    background-color: #F1F1F1;
+    height: 42px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1%;
+
+}
+
+.service_list .col-12 {
+    padding-left: 4%;
+    padding-right: 5%;
+}
+
+.time_slot:hover {
+    background-color: #36C1CC;
+    color: #EEFEFF;
+}
+
+.time_slots_grp
+.flex_item {
+    width: 47%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
+}
+
+.time_slots_grp
+.flex_item p {
+    padding-top: 3%;
+}
+
+.service_list h6 {
+    padding-left: 1%;
+}
+
+.select_doctor .col-md-3 h6 {
+    padding-left: 20%;
+}
+
+.appointment_page_next_btn {
+    border-radius: 27px;
+    background: #36C1CC;
+    width: 13%;
+    opacity: 1;
+    color: white;
+    border: 0px;
+    float: right;
+    height: 45px;
+}
+
+.time_slot_select_date {
+    padding-left: 9%;
+}
+
+.next_btn_padding {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+}
+
+.doctor_details p{
+font-size: 15px;
+}
+
+.doctor_details h6{
+    padding-bottom: 2%;
+}
+
+.patient_details_form h6{
+    padding-bottom: 2%;
+    padding-bottom: 3%;
+}
+
+
+
+.doctor_details{
+    width: 95%;
+}
+
+.doctor_details
+.flex_item {
+    /*width: 25%;*/
+    padding: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+.doctor_details_grp{
+    padding-bottom: 2%;
+}
+
+/*patient details form*/
+
+.input_decs{
+    border: 0;
+    border-bottom: 1px solid;
+    width: 90%;
+    border-color: #585858;
+    font-size: 18px;
+}
+
+.pay_now_btn{
+    border-radius: 27px;
+    background: #36C1CC;
+    width: 13%;
+    opacity: 1;
+    color: white;
+    border: 0px;
+    float: left;
+    height: 45px;
+}
+
+.pay_now_btn2{
+    border-radius: 27px;
+    background: #36C1CC;
+    width: 13%;
+    opacity: 1;
+    color: white;
+    border: 0px;
+    float: right;
+    height: 45px;
+}
+
+.button_padding{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.button_padding2{
+    padding-top: 2%;
+    padding-bottom: 7%;
+    padding-left: -1%;
+    padding-right: 2%;
+}
+
+.container_grp {
+    display: block;
+    position: relative;
+    padding-left: 24px
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_grp input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #36C1CC;
+    margin-top: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.container_grp:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_grp input:checked ~ .checkmark {
+    background-color:#36C1CC;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_grp input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_grp .checkmark:after {
+    left: 3px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.check_box_grp_padding {
+    padding-bottom: 6%;
+}
+.form_size{
+    width: 95%;
+    margin: auto;
+}
+
+.patient_details_form h2 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    outline: none;
+}
+
+.patient_details_form label{
+    color:#585858 ;
+}
+
+.check_mark .check_mark_img{
+    display: block;
+    margin: auto;
+    padding-top: 2%;
+}
+
+.payment_success_content_grp{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.payment_success_content_grp h3{
+    color: #36C1CC;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+.title_grp{
+    position: absolute;
+    margin-top: 10%;
+    color: white;
+    width: 100%;
+}
+
+.title_1{
+    background-color: #00A9BE;
+    width: 30%;
+}
+
+.title_1 h2 {
+    padding: 4% 4%;
+}
+
+.title_2{
+    background-color: #585858;
+    margin-top: 1%;
+    padding: 1% 2%;
+    width: 30%;
+}
+
+.title_grp p{
+    color: #585858;
+    font-size: 25px;
+    width: 49%;
+    padding-top: 3%;
+
+}
+
+.title_grp
+.link_doc{
+    font-size: 100%;
+}
+
+

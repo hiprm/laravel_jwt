@@ -1,0 +1,225 @@
+section#slider_home img.m_banner {
+    width: 100%;
+    top: 191px;
+left: 0px;
+width: 1920px;
+
+}
+
+section#slider_home {
+    padding-bottom: 200px;
+    background: url(../assets/home-banner.png) no-repeat #ecfcfc;
+    background-position: bottom center;
+   background-size:cover;
+   height:100vh;
+	
+}
+
+    section#slider_home {
+        padding-bottom: 0px;
+    }
+
+
+
+.online_channeling{
+    background-color:#EEFEFF ;
+    padding-bottom: 5%;
+}
+
+.line-bar {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    right: -50%;
+}
+
+.online_channeling_heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.online_channeling_heading h1 {
+    text-align: center;
+    font: normal normal normal 40px/48px Lato;
+    letter-spacing: 0px;
+    color: #00A9BE;
+    text-transform: capitalize;
+    opacity: 1;
+    position: relative;
+}
+
+.online_channeling_heading img {
+    float: left;
+    width: 65px;
+    height: 37px;
+    padding-left: 12px;
+    margin-top: 9px;
+}
+
+.online_channeling_element_sec {
+    margin: auto;
+}
+
+.online_channeling_element {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /*box-shadow: 0px 3px 20px #00000021;*/
+    /*border: 2px solid #36C1CC;*/
+    border-radius: 20px;
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+.online_channeling_element:hover  {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000021;
+    border: 2px solid #36C1CC;
+    border-radius: 20px;
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+.online_channeling_element_img {
+    width: 87px;
+    height: 114px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.online_channeling_element p {
+    text-align: center;
+    font: normal normal bold 16px/30px Lato;
+    letter-spacing: 0px;
+    color: #585858;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-top: 15px;
+
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.services {
+    background-color: #F1F1F1;
+    height: 67px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.service_list
+.flex_item{
+    width: 25%;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+
+
+.services:hover {
+    background-color: #36C1CC;
+    color: #EEFEFF;
+}
+
+.services p {
+    padding-top: 8%;
+}
+
+.appointment_service h2 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.appointment_service h6 {
+    margin-left: 1%;
+    padding-bottom: 1%;
+}
+
+.select_doctor {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.custom_div {
+    width: 85%;
+    margin: auto;
+}
+
+.select_doctor h6 {
+    padding-left: 2%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select_doctor
+.flex_item{
+    width: 33.3%;
+    padding: 0 0 15px 0;
+}
+
+.time_slot{
+    background-color: #F1F1F1;
+    height: 42px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1%;
+
+}
+
+.service_list .col-12{
+    padding-left: 4%;
+    padding-right: 5%;
+}
+
+.time_slot:hover {
+    background-color: #36C1CC;
+    color: #EEFEFF;
+}
+
+.time_slots_grp
+.flex_item{
+    width: 50%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
+}
+.time_slots_grp
+.flex_item p{
+    padding-top: 3%;
+}
+
+.service_list h6{
+    padding-left: 1%;
+}
+.select_doctor .col-md-3 h6{
+    padding-left: 8%;
+}
+
+.appointment_page_next_btn {
+    border-radius: 27px;
+    background: #36C1CC;
+    width: 13%;
+    opacity: 1;
+    color: white;
+    border: 0px;
+    float: right;
+    height: 45px;
+}
+

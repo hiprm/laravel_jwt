@@ -1,0 +1,2695 @@
+/*
+	Theme Name: RN Health
+	Theme URI: https://weblankan.com
+	Author: Dilini
+	Author URI: https://weblankan.com
+	Description: RN Health
+	Version: 1.0
+	Text Domain: RN Health
+*/
+
+:root {
+    --main-color: #36C1CC;
+	--main-font:'Lato', sans-serif;
+	--secondary-color:#585858;
+	--font-color:#7E7E7E;
+	--blue-variation:#00a9be;
+	--bg-color:#F6F6F6;
+}
+
+.up-btn{
+	position: fixed;
+	bottom:20px;
+	right: 20px;
+	background: var(--main-color);
+	z-index: 999;
+	border: 0;
+    padding: 10px;
+}
+
+.up-btn img{
+	width: 70%;
+}
+
+.up-btn{
+	display: none;
+}
+
+.up-btn-scroll{
+	display: block !important;
+}
+
+#footer .footer-main a:hover{
+	color: var(--secondary-color) !important;
+}
+
+#request{
+	z-index: 9999999;
+}
+
+.owl-next:focus,.owl-prev:focus{
+	background: transparent !important;
+}
+
+input[type="date"]{
+	background: #fff;
+}
+
+.banner{
+	background: var(--main-color);
+	background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(255 255 255 / 63%));
+}
+
+.home .banner{
+	background: var(--main-color);
+	background-image: none !important;
+}
+
+.banner .heading {
+    padding-bottom: 0px !important;
+}
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+
+  .banner-grid{
+	  position: relative;
+  }
+
+  .banner-grid::before{
+	position:absolute;
+	content: "";
+	top: 0;
+	opacity: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #ffff;
+	animation: zoomin 1.5s ease-in-out forwards;
+	animation-delay: 4s;
+}
+  
+  .scrolled.fade-in {
+    animation: animateup 1s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  .scrolled.fade-down {
+    animation: animatedown 1s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  .animatedown{
+    animation: animatedown 1.5s ease-in-out forwards;
+}
+
+.animatezoomin{
+    animation: zoomin 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+}
+
+.animatezoomtopleft{
+    animation: zoomtopleft 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+}
+
+.animatezoomtopright{
+    animation: zoomtopright 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+}
+
+.animatezoombottomright{
+    animation: zoombottomright 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+}
+
+.animatezoombottomleft{
+    animation: zoombottomleft 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+}
+
+.banner__content-box {
+    opacity: 0;
+}
+
+@keyframes zoomtopleft {
+    0% {
+        transform: scale(0);
+		opacity: 0;
+		transform-origin: 100% 100%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    100% {
+        transform: scale(1);
+		opacity: 1;
+		transform-origin: 100% 100%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  @keyframes zoomtopright {
+    0% {
+        transform: scale(0);
+		opacity: 0;
+		transform-origin: 0% 100%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    100% {
+        transform: scale(1);
+		opacity: 1;
+		transform-origin: 0% 100%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  @keyframes zoombottomleft {
+    0% {
+        transform: scale(0);
+		opacity: 0;
+		transform-origin: 100% 0%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    100% {
+        transform: scale(1);
+		opacity: 1;
+		transform-origin: 100% 0%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+
+  @keyframes zoombottomright {
+    0% {
+        transform: scale(0);
+		opacity: 0;
+		transform-origin: 0% 0%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    100% {
+        transform: scale(1);
+		opacity: 1;
+		transform-origin: 0% 0%;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        transition: transform 0ms, opacity 0ms, -webkit-transform 0ms;
+    }
+    100% {
+        transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 1500ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+  @keyframes animateup {
+    0% {
+        transform: translate3d(5px, 40px, 0);
+        opacity: 0;
+        transition: transform 0ms, opacity 0ms, -webkit-transform 0ms;
+    }
+    100% {
+        transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 1500ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes animatedown {
+    0% {
+        transform: translate3d(5px, -40px, 0);
+        opacity: 0;
+        transition: transform 0ms, opacity 0ms, -webkit-transform 0ms;
+    }
+    100% {
+        transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 1500ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+  }
+  
+
+body{
+	font-family: var(--main-font);
+}
+
+.breadcrumbs a,.breadcrumbs{
+	color: var(--font-color);
+}
+
+.breadcrumbs a:hover{
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.breadcrumbs{
+	padding-top: 30px;
+	text-transform: capitalize;
+}
+
+button:focus{
+	outline: 0 !important;
+	border:0 !important;
+}
+
+.bg-grid--white{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-img.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom right;
+}
+
+.ash-bg{
+	background: var(--bg-color);
+}
+
+.paragraph--blue{
+	color: var(--main-color);
+}
+
+.paragraph-special{
+	font-size: 25px;
+	font-style: italic;
+	line-height: 35px;
+}
+
+#primary .menu-item.active .nav-link{
+color: var(--main-color) !important;
+}
+
+.section-padding-top{
+padding-top: 150px;
+} 
+
+.section-padding-bottom{
+padding-bottom: 150px;
+}
+
+.section-simple-padding-top{
+	padding-top: 100px;
+	} 
+	
+.section-simple-padding-bottom{
+padding-bottom: 100px;
+}
+
+.specialist-new-wrapper .specialist-wrapper{
+	text-align: center;
+}
+
+.heading{
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 400;
+	padding-bottom: 40px;
+}
+
+.heading--blue-after{
+	position: relative;
+}
+
+.heading--blue-after::after{
+	position: absolute;
+	content: "";
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/heart-beat.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 75px;
+    height: 67px;
+	background-position: top center;
+	margin-left: 10px;
+}
+
+.heading--white{
+	color: #fff;
+}
+
+.heading--blue{
+	color: var(--main-color);
+}
+
+.sub-heading--white{
+	color: #fff !important;
+}
+
+.sub-heading{
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--secondary-color);
+	font-weight: 400;
+}
+
+.paragraph{
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.paragraph--white{
+	color: #fff;
+}
+
+.paragraph--black{
+color: var(--font-color);
+}
+
+.next-btn{
+	border-radius: 27px;
+	padding: 15px 40px;
+	box-shadow: 0px 3px 6px #00000029;
+}
+
+.next-btn img{
+	width: 20px;
+    padding-left: 5px;
+}
+
+.next-btn:hover{
+	text-decoration: none;
+}
+
+.next-btn--blue{
+	background: var(--main-color);
+	color: #fff;
+}
+
+.next-btn--blue:hover{
+	background: var(--blue-variation);
+	color: #fff;
+	text-decoration: none;
+}
+
+.next-btn--blue:hover img{
+	transform: translateX(3px);
+	transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.next-btn--white{
+	background: #fff;
+	color: var(--main-color);
+}
+
+.next-btn--white:hover{
+	background: var(--blue-variation);
+	color: #fff;
+	text-decoration: none;
+}
+
+.next-btn-wrapper{
+	padding-top: 30px;
+}
+
+/***********************Header****************************/
+.topbar{
+	background: var(--main-color);
+	color: #fff;
+	padding: 10px 0;
+}
+
+.contact-details{
+	list-style-type: none;
+	color: #fff;
+	font-size: 15px;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.contact-details li{
+	padding-right: 50px;
+}
+
+.contact-details a{
+	color: #fff;
+	font-size: 15px;
+}
+
+.contact-details img{
+	padding: 0 10px 0 0;
+}
+
+.social-details{
+	list-style-type: none;
+	color: #fff;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.social-details p{
+	margin: 0;
+	padding: 0;
+}
+
+.social-details li{
+	padding-left: 10px;
+}
+
+.navbar{
+	padding: 0;
+}
+
+.navbar .menu-main-menu-container{
+margin-left: auto;
+width: 90%;
+}
+
+.dropdown-menu {
+    left: auto !important;
+}
+#primary{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+#menu-item-161{
+	background: var(--secondary-color);
+	color: #fff;
+	border-radius: 27px;
+	padding: 15px 10px; 
+	box-shadow: 0px 3px 6px #00000029;
+}
+
+
+#primary li{
+	flex-grow: 1;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.navbar a{
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+	color: var(---secondary-color);
+	text-decoration: none;
+	padding: 0;
+}
+
+.navbar a:hover{
+	color: var(--main-color);
+}
+
+.main-menu{
+	padding: 10px 0;
+}
+
+.dropdown-menu{
+	background: var(--secondary-color);
+	color: #fff;
+	border-radius: 0;
+	border-top: 3px solid var(--main-color);
+}
+
+.dropdown-menu li{
+	padding: 5px 15px 5px 15px !important;
+}
+
+.dropdown-menu li a{
+	font-weight: 400 !important;
+}
+
+.dropdown-menu li a:hover{
+	background: transparent;
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+.header-wrapper{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+/************************Header END****************************/
+
+/*****************************Footer************************************/
+
+#services li{
+	width: 50%;
+}
+
+#services{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.contact-wrapper{
+	width: 30%;
+	border-right:1px solid #fff;
+}
+
+.contact-wrapper:last-child{
+	border-right:0 !important;
+}
+
+
+
+.footer-contact{
+	background: var(--secondary-color);
+	padding: 50px 0 30px 0;
+}
+
+.footer-main p{
+	padding: 30px 0;
+}
+
+.footer-main{
+	padding: 120px 0 30px 0;
+}
+
+.contact-wrapper ul{
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.contact-wrapper ul a,.contact-wrapper ul p{
+	color: #fff;
+	font-size: 25px;
+	margin: 0;
+	padding-left: 20px;
+}
+
+.footer-main{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/footer-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: top;
+}
+
+.footer-menu{
+	color: #fff;
+}
+
+.footer-menu-wrapper hr{
+	background: #fff;
+	width: 60%;
+    margin-right: auto;
+    display: block;
+    margin-left: 0;
+}
+
+.footer-menu-wrapper a{
+	color: #fff;
+	font-size: 15px;
+}
+
+.footer-menu-wrapper{
+	padding: 0 30px;
+}
+
+.copyright{
+	background: var(--secondary-color);
+	color: #fff;
+	padding: 10px 0;
+}
+
+.copyright a,.copyright p{
+	color: #fff;
+	margin: 0;
+	font-size: 14px;
+	letter-spacing: 0.28px;
+} 
+
+/******************************Footer END***********************************/
+
+/**************************Home*************************************/
+.venobox-vedio{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 111;
+}
+
+.venobox-vedio:hover{
+	background-color: rgb(54 193 204 / 62%);
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/play.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20%;
+}
+
+.vedio-slider .active{
+	transform: scale(0.6);
+	transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vedio-slider .active.center{
+	transform: scale(1) !important;
+	transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.video_wrapper{
+	position: relative;
+}
+
+.video_wrapper iframe{
+	width: 100% !important;
+	height: 40vh !important;
+}
+
+.banner-grid {
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	position: relative;
+	}
+	
+	.div1 { 
+		grid-area: 1 / 1 / 2 / 2;
+		background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/rn-doc.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-left: 20%;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	 }
+	.div2 { 
+		grid-area: 1 / 2 / 2 / 3;
+		background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/rn-pharma.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: right;
+		justify-content: flex-end;
+		padding-right: 20%;
+		margin-left: 5px;
+		margin-bottom: 5px;
+	 }
+	.div3 { 
+		grid-area: 2 / 1 / 3 / 2;
+		background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/rn-lab.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-left: 20%;
+		margin-right: 5px;
+		margin-top: 5px;
+	}
+	.div4 { 
+		grid-area: 2 / 2 / 3 / 3;
+		background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/rn-well.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: right;
+		justify-content: flex-end;
+		padding-right: 20%;
+		margin-left: 5px;
+		margin-top: 5px;
+	}
+
+.banner{
+	flex-grow: 1;
+}
+
+.banner__content-box{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.center-logo{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.center-logo img{
+	z-index: 99;
+	width: 15%;
+}
+
+/* .banner__content-box::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgb(0 0 0 / 30%);
+} */
+
+.banner__content-box::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: var(--main-color);
+	opacity: 0.6;
+	-webkit-transition: background-color 2s ease-out;
+	-moz-transition: background-color 2s ease-out;
+	-o-transition: background-color 2s ease-out;
+	transition: background-color 2s ease-out;
+}
+
+.banner__content{
+	z-index: 1;
+    position: relative;
+	width: 60%;
+}
+
+.banner__content-box:hover::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgb(0 0 0 / 90%);
+}
+
+/* .banner__content-box:hover .next-btn--white{
+	background: var(--main-color);
+	color: #fff;
+} */
+
+.special-quote{
+	font-size: 20px;
+	line-height: 30px;
+	color: var(--secondary-color);
+	font-style: italic;
+}
+
+/* .welcome-section{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-img.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom right;
+} */
+
+/* .why-choose{
+	background: var(--bg-color);
+} */
+
+.why-choose-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 15px;
+	padding: 0 50px;
+	}
+.div5 { grid-area: 1 / 1 / 2 / 2; }
+.div6 { grid-area: 1 / 2 / 2 / 3; }
+.div7 { grid-area: 2 / 1 / 3 / 2; }
+.div8 { grid-area: 2 / 2 / 3 / 3; }
+
+.why-choose-grid__content{
+	font-size: 20px;
+	color: var(--secondary-color);
+	line-height: 35px;
+}
+
+.why-choose-grid__item{
+	text-align: center;
+}
+
+.process-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	padding-bottom: 150px;
+	}
+	
+	.div9 { grid-area: 1 / 1 / 2 / 2;position: relative;}
+	.div10 { grid-area: 1 / 2 / 2 / 3;position: relative; }
+	.div11 { grid-area: 1 / 3 / 2 / 4;position: relative; }
+	.div12 { grid-area: 2 / 3 / 3 / 4;position: relative;}
+	.div13 { grid-area: 2 / 2 / 3 / 3;position: relative; }
+	.div14 { grid-area: 2 / 1 / 3 / 2;position: relative;}
+
+.process-grid__title{
+	background: var(--secondary-color);
+	border-radius: 27px;
+	color: #fff;
+	font-size: 20px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 0 10px 0 0;
+	margin-top: 20px;
+}
+
+.process-grid__title p{
+margin: 0;
+}
+.process-grid__title span{
+	background: var(--main-color);
+	height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin: 5px;
+}
+
+.process-grid__content{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-grid__desc{
+	text-align: center;
+	width: 60%;
+    padding-top: 20px;
+}
+
+.div9 .path{
+	position: absolute;
+    right: -34%;
+    top: 18%;
+}
+.div10 .path{
+	position: absolute;
+    right: -25%;
+    top: 35%;
+}
+.div11 .path{
+	position: absolute;
+    right: -13%;
+    top: 55%;
+}
+
+.div11 .process-grid__content{
+	position: relative;
+    top: 18%;
+}
+
+.div12 .path{
+	position: absolute;
+	top: 66%;
+    left: -17%;
+}
+
+.div12 .process-grid__content{
+	position: relative;
+    top: 45%;
+	left: 20%;
+}
+
+.div13 .path{
+	position: absolute;
+    top: 67%;
+    left: -16%;
+}
+
+.div13 .process-grid__content{
+	position: relative;
+    top: 62%;
+    left: 16%;
+}
+
+.div14 .path{
+	position: absolute;
+	top: 75%;
+    left: 1%;
+}
+
+.div14 .process-grid__content{
+	position: relative;
+    top: 50%;
+    left: 10%;
+}
+
+.path{
+	z-index: -1;
+}
+
+
+.facility-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	}
+	
+	.div15 { grid-area: 1 / 1 / 2 / 2; }
+	.div16 { grid-area: 1 / 2 / 2 / 3; }
+	.div17 { grid-area: 1 / 3 / 2 / 4; }
+	.div18 { grid-area: 1 / 4 / 2 / 5; }
+
+.facility__content{
+	text-align: left;
+    padding: 50px 30px;
+}
+
+.facility__content h6{
+padding: 20px 0;
+}
+
+.facility__wrapper{
+	padding: 10px;
+}
+
+.facility__content--blue{
+background: var(--main-color) !important;
+height: 100%;
+}
+
+.facility__content--brown{
+	position: relative;
+	background: var(--secondary-color);
+	height: 100%;
+}
+
+.div15:hover .facility__content{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/rn-well.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.facility__content-inner-wrapper{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+	transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+	z-index: 1;
+}
+
+.facility__content-inner{
+	height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255 255 255 / 63%);
+	
+}
+
+.facility__wrapper{
+	position: relative;
+}
+
+.facility-wrapper1{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/facility1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.facility-wrapper2{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/facility2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.facility-wrapper3{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/facility3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.facility-wrapper4{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/facility4.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.facility__wrapper:hover .facility__content-inner-wrapper{
+	transform: perspective(2000px) rotateY(0deg);
+}
+
+.facility-bottom{
+	top: 10%;
+}
+
+.consult-sec{
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/consult-sec.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 50px 0;
+}
+
+.consult-sec .heading {
+	padding-bottom: 0 !important;
+}
+
+.channel-btn{
+	padding: 20px 30px;
+	border: 0;
+}
+
+.consult-sec .heading{
+	font-weight: bold;
+}
+
+.channel-btn img {
+    width: 20px;
+    padding-left: 5px;
+}
+
+/* .vedio-sec{
+	padding-top: 100px;
+} */
+
+.ul-underline{
+	list-style-type: none;
+	padding: 0;
+	width: fit-content;
+}
+
+.ul-underline li{
+	border-bottom: 1px solid var(--font-color);
+	padding: 20px 0;
+}
+
+.ul-underline li p{
+	margin: 0;
+}
+
+
+.video_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	background-color: #000;
+	height: 40vh;
+  }
+  
+  .videoIframe {
+	/* position: absolute; */
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 40vh;
+	background-color: transparent;
+  }
+  
+  .videoPoster {
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  width: 100%;
+	  height: 40vh;
+   background-image:url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/vedio-cover.jpg');
+	background-size: 100%;
+	border: none;
+	 text-indent: -999em;
+	overflow: hidden;
+	opacity: 1;
+	-webkit-transition: opacity 800ms, height 0s;
+	-moz-transition: opacity 800ms, height 0s;
+	transition: opacity 800ms, height 0s;
+	-webkit-transition-delay: 0s, 0s;
+	-moz-transition-delay: 0s, 0s;
+	transition-delay: 0s, 0s;
+  }
+  .videoPoster:hover {
+	cursor: pointer;
+  }
+  .videoPoster:before {
+	content: '';
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 90px;
+	height: 90px;
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/play.png');
+	background-repeat: no-repeat;
+  }
+  .videoPoster:hover:before,  .videoPoster:focus:before {
+	  border-color: #f00;
+  }
+  .videoPoster:hover:after, .videoPoster:focus:after {
+	border-left-color: #f00;
+  }
+  .videoWrapperActive .videoPoster {
+	opacity: 0;
+	height: 0;
+	-webkit-transition-delay: 0s, 800ms;
+	-moz-transition-delay: 0s, 800ms;
+	transition-delay: 0s, 800ms;
+  }
+
+  .vedio-sec{
+	  position: relative;
+  }
+
+  .vedio-sec::before{
+	position: absolute;
+	content: "";
+	/* clip-path: polygon(40% 0, 40% 90%, 0 90%, 0 0); */
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+}
+
+.testimonial-sec{
+	background-image:url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-img.png'),url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/testi-bg.png');
+	background-repeat: no-repeat;
+	background-size: contain,cover;
+	background-position: top right,bottom left;
+}
+
+.slider-btn{
+	background: var(--main-color);
+    padding: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn img{
+	width: 20px !important;
+}
+
+.testimonial-wrapper{
+	width: 70%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-slider .owl-prev{
+	position: absolute;
+	left: 50px;
+	top: 0%;
+}
+
+.testimonials-slider .owl-next{
+	position: absolute;
+	right: 50px;
+	top: 0%;
+}
+
+.testimonial-name{
+	position: relative;
+}
+
+.testimonial-name::before{
+	content: "";
+    height: 1px;
+    width: 100px;
+    background: var(--font-color);
+    position: absolute;
+    left: -110px;
+    top: 50%;
+}
+
+.testimonial-name::after{
+	content: "";
+    height: 1px;
+    width: 100px;
+    background: var(--font-color);
+    position: absolute;
+    right: -110px;
+    top: 50%;
+}
+
+.news-item-wrapper{
+	width: 33.3%;
+	padding: 20px;
+}
+
+.news-date-wrapper{
+	height: 60px;
+    width: 60px;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.news-item-wrapper .paragraph--blue{
+font-size: 20px;
+line-height: 30px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.read-more{
+	color: var(--font-color);
+}
+
+.read-more:hover{
+	text-decoration: none;
+	color: var(--blue-variation) !important;
+}
+
+.advertistment-slider .owl-prev{
+	position: absolute;
+	left: -70px;
+	top: 50%;
+}
+
+.advertistment-slider .owl-next{
+	position: absolute;
+	right: -70px;
+	top: 50%;
+}
+
+.vedio-slider .owl-prev{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+}
+
+.vedio-slider .owl-next{
+	position: absolute;
+	right:0px;
+	top: 50%;
+}
+
+.advertistment-slider .owl-nav{
+display: block !important;
+}
+
+.advertistment-slider .item{
+	padding: 30px;
+}
+
+/* .adv-sec{
+	background: var(--bg-color);
+} */
+
+  /**************************Home END*************************************/
+
+  /***************************About Us*******************************************/
+
+.about-us{
+	background-image:url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/banner-curve.png'),url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/about-banner.jpg');
+	background-repeat: no-repeat;
+	background-size:100%,100%, cover;
+	background-position:center,bottom, center center;
+}
+
+.banner-heading {
+	color: #fff;
+	font-size: 40px;
+	font-family: var(--main-font);
+	width: fit-content;
+    padding: 20px;
+}
+
+.banner-heading--blue{
+	background: var(--main-color);
+}
+
+.banner-heading--gray{
+	background: var(--secondary-color);
+}
+
+.banner-paragraph{
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.banner-content{
+	width: 40%;
+}
+
+.vision-mission-col{
+	background: var(--main-color);
+}
+
+.vision-mision-wrapper{
+	padding: 100px;
+}
+
+.heading-wrapper{
+	padding-bottom: 30px;
+}
+
+.board-wrapper{
+	width: 25%;
+	padding: 30px;
+}
+
+.board-content{
+	background: var(--main-color);
+	color: #fff;
+}
+
+.board-content p{
+	margin: 0;
+}
+
+.board-name{
+	font-weight: bold;
+}
+
+.board-content{
+	padding: 10px;
+}
+
+.board-wrapper .paragraph{
+	padding-top: 20px;
+}
+
+  /****************************About Us END*****************************************/
+
+  /**************************Family Clinic*************************************/
+
+.family-clinic{
+	background-image:url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/banner-curve.png'),url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/family-banner.jpg');
+	background-repeat: no-repeat;
+	background-size:100%,100%, cover;
+	background-position:center,bottom, center center;
+}
+
+.specialist-wrapper{
+	padding: 20px 0;
+}
+
+.specialist-wrapper .paragraph{
+	padding-top: 15px;
+}
+
+.our-tratment-sec{
+	background-color: var(--bg-color);
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-left-img.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+.galley-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	height: 72vh;
+	overflow: hidden;
+	padding: 10px;
+}
+	
+.div19 { grid-area: 1 / 1 / 3 / 3; height: 70vh; }
+.div20 { grid-area: 1 / 3 / 2 / 5; height: 35vh; }
+.div21 { grid-area: 2 / 3 / 3 / 5; height: 35vh; }
+.div22 { grid-area: 1 / 5 / 3 / 7; height: 70vh; }
+
+.div19 img{
+	object-fit: cover;
+height: 100%;
+object-position: center;
+}
+
+.div20 img{
+	object-fit: cover;
+	height: 100%;
+object-position: center;
+}
+
+.div21 img{
+	object-fit: cover;
+	height: 100%;
+object-position: center;
+}
+
+.div22 img{
+	object-fit: cover;
+	height: 100%;
+object-position: center;
+}
+
+.item-wrap{
+	padding: 10px;
+}
+
+.gallery-items .active img {
+	animation: animateup 1.5s ease-in-out forwards;
+	animation-delay: calc(.1s * var(--i));
+	opacity: 0;
+	transform: translate3d(5px, 40px, 0);
+}
+
+@keyframes animateup {
+    0% {
+        transform: translate3d(5px, 40px, 0);
+        opacity: 0;
+        transition: transform 0ms, opacity 0ms, -webkit-transform 0ms;
+    }
+    100% {
+        transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 1500ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+  }
+
+.specialist-new-wrapper .specialist-wrapper {
+    padding: 20px 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pills-tab{
+	display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#pills-tab .nav-item{
+	flex-grow: 1;
+	width: 33.3%;
+	padding: 0 5px;
+}
+
+#pills-tab .nav-link{
+	background: #585858;
+    border-radius: 0;
+    color: #fff;
+    font-size: 25px;
+	padding: 10px;
+}
+
+#pills-tab .nav-link.active{
+	background: var(--main-color) !important;
+	position: relative;
+}
+
+#pills-tab .nav-link.active::after{
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid var(--main-color);
+	bottom: -20px;
+    left: 44%;
+    z-index: -1;
+}
+
+#pills-tabContent{
+	padding-top: 30px;
+}
+  /*************************Family Clinic END**************************************/
+
+/******************************Service inner************************************/
+
+.service-contact-wrapper{
+	background: var(--main-color);
+	padding: 30px 50px;
+}
+
+.service-contact-wrapper p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.service-contact-wrapper h6{
+	color: #fff;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.service-contact-wrapper a{
+	color: #fff;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.service-contact-wrapper a:hover{
+	text-decoration: none;
+}
+
+.inner-wrapper-service{
+	border-bottom: 1px solid #fff;
+	padding: 20px 0;
+}
+
+.inner-wrapper-service:last-child{
+	border-bottom: 0 !important;
+}
+
+.inner-wrapper-service img{
+	width: 30px;
+}
+
+.service-content{
+	padding: 0px 50px;
+}
+
+.title-wrapper{
+	background: #585858;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+	align-items: center;
+}
+
+.title-wrapper h6,.title-wrapper .fa{
+    font-size: 20px;
+}
+
+.title-wrapper h6{
+    flex-grow:1;
+}
+
+.tretaments{
+	list-style-type: none;
+	padding:0;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 30px 0;
+}
+
+.tretaments li{
+	position: relative;
+	padding-left: 30px;
+	width: 50%;
+}
+
+.tretaments li::before{
+	position: absolute;
+	content: "";
+	background-image: url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/right.png');
+	background-size: contain;
+	height: 20px;
+	width: 20px;
+	left: 0;
+}
+
+.doctors li{
+	width: 33.3% !important;
+}
+
+/******************************Service Inner END************************************/
+
+/****************************News Events**************************************/
+
+.news-events{
+	background-image:url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/banner-curve.png'),url('https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/family-banner.jpg');
+	background-repeat: no-repeat;
+	background-size:100%,100%, cover;
+	background-position:center,bottom, center center;
+}
+
+#pills-tabContent .news-main-wrapper .news-item-wrapper{
+	display: flex  !important;
+    width: 100% !important;
+}
+
+#pills-tab .nav-link{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pills-tabContent .news-item-wrapper .news-date-wrapper{
+	width: 100px !important;
+}
+
+.news-inner-sec{
+	width: 50%;
+	padding: 20px;
+}
+
+.topic-wrapper-news{
+	align-items: flex-start;
+	padding-bottom: 20px;
+}
+
+.news-item-wrapper-reverse,.news-item-wrapper-reverse .topic-wrapper-news{
+	text-align: right;
+}
+
+.addReadMore.showmorecontent .readMore {
+    display: none;
+}
+
+.addReadMore.showlesscontent .SecSec, .addReadMore.showlesscontent .readLess {
+    display: none;
+}
+
+.addReadMore .readMore, .addReadMore .readLess {
+    font-weight: bold;
+    margin-left: 2px;
+    color: var(--main-color);
+    cursor: pointer;
+    display: block;
+	font-size: 15px;
+}
+
+.display{
+display: block !important; 
+}
+
+.display-none{
+	display: none !important;
+}
+
+.news-main-wrapper{
+	display: none;
+}
+
+.loadMore{
+	display: flex;
+    margin: auto;
+    border: 0;
+    background: var(--main-color);
+    color: #fff;
+}
+
+/*****************************News and Events END***********************************/
+
+/*******************Carrers****************************/
+
+.career-sec #v-pills-tab{
+width: 25%;
+}
+
+.career-sec .tab-content{
+	width: 75%;
+	padding: 0 30px;
+}
+
+.career-sec #v-pills-tab .nav-link{
+	font-size: 20px;
+	color: var(--font-color);
+	border-bottom: 1px solid var(--font-color);
+}
+
+.career-sec #v-pills-tab .nav-link.active{
+	font-size: 20px;
+	color: var(--main-color);
+	background: transparent !important;
+	border-bottom: 1px solid var(--main-color);
+}
+
+.career-sec .tab-content h6{
+	background: var(--secondary-color);
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.career-sec .tab-content ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.career-sec .tab-content ul li{
+	position: relative;
+	color: var(--font-color);
+	font-size: 15px;
+	padding: 5px;
+}
+
+.career-sec .tab-content ul li::before{
+	position: relative;
+	content: "-";
+}
+
+.inner-title{
+	font-weight: bold;
+	font-size: 15px;
+	color: var(--font-color);
+}
+	
+#wpcf7-f187-o1 input[type="text"],#wpcf7-f187-o1 input[type="tel"],#wpcf7-f187-o1 input[type="email"],#wpcf7-f187-o1 input[type="date"]{
+width: 100%;
+}
+
+.form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 1px 0 0 #e5e5e5;
+    transition: box-shadow 150ms ease-out;
+}
+.form-input:focus {
+    box-shadow: 0 2px 0 0 var(--back-bg);
+}
+
+.focused .form-label {
+    transform: translateY(-120%);
+    font-size: 0.75em;
+}
+
+.form-label {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    color: #999;
+    background-color: #fff;
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.contact-details-box{
+	list-style: none;
+	padding: 0;
+}
+
+.contact-details-box li{
+	padding: 10px 0;
+}
+
+
+.contact-details-box li div{
+	display: flex;
+	align-items: center;
+}
+
+.contact-details-box li div img{
+	width: 40px;
+	margin-right: 20px;
+}
+
+.contact-details-box li a,.contact-details-box li p{
+	color: var(--font-color);
+	font-size: 20px;
+}
+
+#wpcf7-f189-o1 input[type='text'],#wpcf7-f189-o1 input[type='email'],#wpcf7-f189-o1 input[type='tel'],
+#wpcf7-f187-o1 input[type='text'],#wpcf7-f187-o1 input[type='email'],#wpcf7-f187-o1 input[type='tel'],#wpcf7-f187-o1 input[type='date'],
+#wpcf7-f220-o1  input[type='text'],#wpcf7-f220-o1  input[type='email'],#wpcf7-f220-o1  input[type='tel'],#wpcf7-f220-o1  textarea
+{
+	padding: 15px 30px;
+	border: 1px solid var(--secondary-color);
+	border-radius: 30px;
+	box-shadow: 0px 3px 6px #00000029;
+	width: 100%;
+    /* margin: 20px 0; */
+	color: var(--font-color);
+}
+
+#wpcf7-f189-o1 input[type='submit'],#wpcf7-f187-o1 input[type='submit'],#wpcf7-f220-o1 input[type='submit']{
+	display: flex;
+    margin-right: auto;
+    border: 0;
+    background: var(--main-color);
+    color: #fff;
+	border-radius: 27px;
+    padding: 15px 40px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+#wpcf7-f187-o1 input[type='submit']{
+	margin: auto !important;
+}
+
+.our-facility-sec{
+	padding-bottom: 100px;
+}
+
+#wpcf7-f189-o1 input[type='text']:focus,#wpcf7-f189-o1 input[type='email']:focus,#wpcf7-f189-o1 input[type='tel']:focus,
+#wpcf7-f187-o1 input[type='text']:focus,#wpcf7-f187-o1 input[type='email']:focus,#wpcf7-f187-o1 input[type='tel']:focus,#wpcf7-f187-o1 input[type='date']:focus,
+#wpcf7-f220-o1 input[type='text']:focus,#wpcf7-f220-o1 input[type='email']:focus,#wpcf7-f220-o1 input[type='tel']:focus{
+	outline: 0;
+	border: 1px solid var(--main-color) !important;
+}
+
+#wpcf7-f187-o1 input[type='file']{
+	padding: 15px 30px;
+	width: 70%;
+}
+
+.form-label-file{
+	color: var(--font-color);
+	font-size: 15px;
+}
+
+.center-col{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+
+.cv-doc{
+	display: flex;
+    justify-content: center;
+}
+
+.vision-mission-img{
+	width: 100%!important;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-input label{
+	background-color: var(--secondary-color);
+	color: #fff;
+	padding: 10px;
+}
+.career-sec {
+	background-color: #eefeff;
+	background-image: url(https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-left-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.our-facility-sec{
+	padding-bottom: 100px;
+}
+/*******************Carrers END****************************/
+
+/*****************************************************************/
+
+
+@media only screen and (min-width: 1400px) {
+	
+}
+
+@media (min-width: 991px) and (max-width: 1400px) {
+	.facility__content {
+		padding: 20px 30px !important;
+	}
+	.ul-underline li {
+		padding: 15px 0 !important;
+	}
+	.heading {
+		padding-bottom: 30px !important;
+	}
+	.col-lg-4 {
+		-ms-flex: 0 0 40% !important;
+		flex: 0 0 40% !important;
+		max-width: 40% !important;
+	}
+	.section-padding-top {
+		padding-top: 100px !important;
+	}
+	.section-padding-bottom {
+		padding-bottom: 100px !important;
+	}
+	.process-grid__title{
+		font-size: 16px !important;
+	}
+	.section-simple-padding-bottom {
+		padding-bottom: 50px !important;
+	}
+	.section-simple-padding-top {
+		padding-top: 50px !important;
+	}
+	.contact-wrapper ul a, .contact-wrapper ul p{
+		font-size: 20px !important;
+	}
+	.heading {
+		font-size: 35px !important;
+	}
+	.banner .heading{
+		padding-bottom: 0 !important;
+	}
+	.why-choose-grid__content{
+		font-size: 16px !important;
+	}
+	.paragraph-special {
+		font-size: 20px !important;
+		line-height: 30px !important;
+	}
+	.navbar .menu-main-menu-container {
+		width: 100% !important;
+	}
+	.why-choose-grid {
+		padding: 0 !important;
+	}
+	.process-grid__content img{
+		width: 60%;
+	}
+	.news-date-wrapper h6{
+		padding: 20px;
+	}
+	.news-item-wrapper .paragraph--blue {
+		font-size: 18px !important;
+	}
+	.banner-heading {
+		color: #fff;
+		font-size: 35px !important;
+	}
+	.special-quote {
+		font-size: 16px !important;
+		line-height: 30px !important;
+	}
+	.navbar a {
+		font-size: 14px !important;
+	}
+	.col-lg-8 {
+		-ms-flex: 0 0 80% !important;
+		flex: 0 0 80% !important;
+		max-width: 80% !important;
+	}
+	.col-lg-5{
+		-ms-flex: 0 0 40% !important;
+		flex: 0 0 40% !important;
+		max-width: 40% !important;
+	}
+	.col-5{
+		-ms-flex: 0 0 50% !important;
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
+	}
+	.col-lg-3{
+		-ms-flex: 0 0 30% !important;
+		flex: 0 0 30% !important;
+		max-width: 30% !important;
+	}
+	.service-content {
+		padding: 10px !important ;
+	}
+	.banner-heading {
+		padding: 10px !important;
+	}
+}
+
+@media only screen and (min-width: 991px) {
+	.mobile-logo{
+		display: none;
+	}
+	.contact-wrapper:nth-child(2){
+		width: 40% !important;
+	}
+	.news-item-wrapper-reverse,.news-item-wrapper-reverse .topic-wrapper-news{
+		flex-direction: row-reverse !important;
+		text-align: right;
+	}
+	.main-scrolled{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+		background: #fff;
+		box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    	transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.mobile-logo{
+		padding-bottom: 20px;
+	}
+	.main-scrolled{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+		background: #fff;
+		box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+		transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
+	.navbar-toggler{
+		z-index: 999999;
+	}
+	.navbar-col{
+		padding:0 !important;
+	}
+	#primary {
+		flex-direction: column !important;
+	}
+	.show {
+        -webkit-transform: scaleY(1) !important;
+        transform: scaleY(1) !;
+        -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, .37, .66) !important;
+        transition-timing-function: cubic-bezier(0.52, 1.64, .37, .66) !important;
+    }
+    .navbar-collapse {
+		overflow: auto;
+        background-color: #fff;
+		background-image: url(https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-img.png),url(https://www.rnhealth.lk/wp-content/themes/rnhealth/assets/img/back-left-img.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom right, top left;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .2s;
+        transition-duration: .2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+	.vedio-slider .active {
+		transform: scale(1) !important;
+	}
+	.navbar-brand{
+		padding-left: 20px;
+	}
+	.contact-details li {
+		padding-right: 25px !important;
+	}
+	.topbar {
+		padding: 10px !important;
+	}
+	.banner-content {
+		width: 80% !important;
+	}
+	.section-padding-top {
+		padding-top: 50px !important;
+	}
+	.section-padding-bottom {
+		padding-bottom: 50px !important;
+	}
+	.section-simple-padding-bottom {
+		padding-bottom: 50px !important;
+	}
+	.section-simple-padding-top {
+		padding-top: 50px !important;
+	}
+	.footer-main {
+		padding: 50px !important;
+	}
+	.contact-wrapper ul a, .contact-wrapper ul p {
+		font-size: 16px !important;
+		padding-left: 10px !important;
+	}
+	.contact-wrapper {
+		width: 33.3% !important;
+		padding: 0 10px;
+		justify-content: center !important;
+	}
+	.footer-main {
+		background-color: var(--main-color);
+	}
+	.social-details{
+		padding-bottom: 20px;
+	}
+	.col-5 {
+		-ms-flex: 0 0 100% !important;
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+	.heading {
+		font-size: 30px !important;
+		line-height: 40px !important;
+	}
+	.board-wrapper {
+		width: 50% !important;
+	}
+	.director-wrap{
+		flex-wrap: wrap;
+	}
+	.about-us-img{
+		width: 50% !important;
+    margin: auto;
+    display: block;
+	}
+	.why-choose .row{
+		flex-direction: column-reverse;
+	}
+	.path {
+		display: none;
+	}
+	.facility-grid{
+		display: flex !important;
+		flex-wrap: wrap;
+	}
+	.facility__wrapper {
+		position: relative !important;
+		top: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+		right: auto !important;
+		width: 50%;
+	}
+	.process-grid{
+		display: flex !important;
+		flex-wrap: wrap;
+		padding-bottom: 0 !important;
+	}
+	.journey-wrap{
+		position: relative;
+		top: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+		right: auto !important;
+		width: 50%;
+	}
+	.process-grid__content {
+		position: relative;
+		top: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+		right: auto !important;
+	}
+	.process-grid__content img{
+		height: 150px;
+		width: auto !important;
+	}
+	.advertistment-slider .owl-next {
+		right: 0 !important;
+	}
+	.advertistment-slider .owl-prev {
+		left: 0 !important;
+	}
+	.vedio-slider .owl-next {
+		right: 0 !important;
+	}
+	.vedio-slider .owl-prev {
+		left: 0 !important;
+	}
+	.news-date-wrapper h6{
+		padding: 10px;
+	}
+	.vedio-sec {
+		padding-top: 50px !important;
+	}
+	.vedio-sec::before {
+		/* clip-path: polygon(40% 0, 40% 50%, 0 50%, 0 0) !important; */
+	}
+	#header .social-details {
+		padding-bottom: 0 !important;
+	}
+	.banner .heading {
+		padding-bottom: 10px !important;
+	}
+	.consult-sec .heading {
+		padding-bottom: 0 !important;
+	}
+	.channel-btn{
+		display: block;
+	}
+	.news-item-wrapper-reverse,.news-item-wrapper-reverse .topic-wrapper-news{
+		flex-direction: row-reverse !important;
+		text-align: right;
+	}
+	#primary li {
+		flex-direction: column;
+	}
+	#menu-item-161 {
+		padding: 10px 15px !important;
+	}
+	#primary {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	#primary li {
+		padding: 10px 0;
+	}
+	.navbar .menu-main-menu-container {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 100% !important;
+	}
+	.dropdown-menu {
+		background: #58585800 !important;
+		color: #585858 !important;
+		border-radius: 0;
+		text-align: center !important;
+		border-top: 3px solid var(--main-color) !important;
+		border: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.vedio-slider .active {
+		transform: scale(1) !important;
+	}
+	.div1 {
+    margin-right: 2px !important;
+    margin-bottom: 2px !important;
+}
+	.div2 {
+    margin-left: 2px !important;
+    margin-bottom: 2px !important;
+}
+	.div3 {
+    margin-right: 2px !important;
+    margin-top: 2px !important;
+}
+	.div4 {
+    margin-left: 2px !important;
+    margin-top: 2px !important;
+}
+	.dropdown-menu {
+		background: #58585800 !important;
+		color: #585858 !important;
+		border-radius: 0;
+		text-align: center !important;
+		border-top: 3px solid var(--main-color) !important;
+		border: 0;
+	}
+	.up-btn {
+		padding: 2px !important;
+	}
+	.advertistment-slider .item {
+		padding: 0 !important;
+	}
+	.banner .next-btn {
+		padding: 6px 6px !important;
+	}
+	.banner .heading {
+		font-size: 20px !important;
+	}
+	.slider-btn {
+		width: 30px !important;
+		height: 30px !important;
+	}
+	.news-home-sec .next-btn-wrapper{
+		margin-top: 20px;
+	}
+	.facility__content {
+		padding: 30px 30px !important;
+	}
+	.our-facility-sec {
+		padding-bottom: 50px !important;
+	}
+	.heading-col-left{
+		justify-content: flex-start !important;
+	}
+	.breadcrumbs {
+		padding-top: 10px !important;
+		text-transform: capitalize;
+	}
+	.process-grid__title{
+		font-size: 18px;
+	}
+	.footer-contact {
+		padding: 30px 0 0px 0;
+	}
+	.col-sm-6{
+		-ms-flex: 0 0 50% !important;
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
+	}
+	.banner .next-btn{
+		position: absolute;
+		bottom: 0;
+		width: 120px;
+    	text-align: center;
+	}
+	.banner .div2 .next-btn,.banner .div4 .next-btn{
+		right: 0;
+	}
+	.item-wrap {
+		height: 50vh !important;
+	}
+	.galley-grid{
+		display: flex !important;
+    	flex-direction: column;
+		height: auto !important;
+	}
+	.our-tratment-sec .heading{
+		width: 80%;
+	}
+	.next-btn {
+		display: block;
+		text-align: center;
+		width: fit-content;
+	}
+	.banner{
+		position: relative;
+	}
+	.banner::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgb(255 255 255 / 50%);
+	}
+	.specialist-wrapper {
+		padding: 10px 0 !important;
+	}
+	.news-item-wrapper .news-inner-sec:nth-child(1){
+		padding-bottom: 0 !important;
+	}
+	.news-item-wrapper .news-inner-sec:nth-child(2){
+		padding-top: 0 !important;
+	}
+	.news-item-wrapper {
+		padding: 0 !important;
+	}
+	/* #pills-tabContent {
+		padding-top: 0 !important;
+	} */
+	#pills-tab .nav-link {
+		font-size: 16px !important;
+	}
+	.service-content {
+		padding: 0px 30px !important;
+	}
+	.col-5 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	/* .heading {
+		width: 80%;
+	} */
+	#primary li {
+		flex-direction: column;
+	}
+	#menu-item-161 {
+		padding: 10px 15px !important;
+	}
+	#primary {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	#primary li {
+		padding: 10px 0;
+	}
+	.navbar .menu-main-menu-container {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 100% !important;
+	}
+	.board-wrapper {
+		width: 100% !important;
+		padding: 10px 30px !important;
+	}
+	.banner-paragraph {
+		line-height: 30px !important;
+	}
+	.banner-heading {
+		padding: 10px !important;
+	}
+	.vision-mision-wrapper {
+		padding: 20px !important;
+	}
+	.news-item-wrapper .paragraph--blue {
+		font-size: 18px !important;
+		line-height: 25px !important;
+	}
+	.news-date-wrapper h6{
+		padding: 10px;
+	}
+	.testimonial-sec {
+		background-color: #eefeff !important;
+	}
+	.testimonial-name::before {
+		width: 35px !important;
+		left: -40px !important;
+	}
+	.testimonial-name::after {
+		width: 35px !important;
+		right: -40px !important;
+	}
+	.testimonials-slider .owl-next {
+		right: 0 !important;
+	}
+	.testimonials-slider .owl-prev {
+		left: 0 !important;
+	}
+	.ul-underline li {
+		padding: 15px 0 !important;
+	}
+	.paragraph-special {
+		font-size: 20px !important;
+		line-height: 30px !important;
+	}
+	.vedio-sec::before {
+		/* clip-path: polygon(40% 0, 40% 30%, 0 30%, 0 0) !important; */
+	}
+	.vedio-sec {
+		padding-top: 50px !important;
+	}
+	.channel-btn {
+		padding: 20px 30px !important;
+		display: block;
+		border: 0;
+	}
+	.process-grid {
+		padding-bottom: 0 !important;
+	}
+	.why-choose-grid__content {
+		font-size: 16px !important;
+		line-height: 25px !important;
+	}
+	.why-choose .row{
+		flex-direction: column-reverse;
+	}
+	.why-choose-grid {
+		padding: 0 !important;
+	}
+	.heading {
+		padding-bottom: 20px !important;
+	}
+	.special-quote {
+		font-size: 18px !important;
+    	line-height: 25px !important;
+	}
+	.section-padding-top {
+		padding-top: 30px !important;
+	}
+	.section-padding-bottom {
+		padding-bottom: 30px !important;
+	}
+	.section-simple-padding-bottom {
+		padding-bottom: 30px !important;
+	}
+	.section-simple-padding-top {
+		padding-top: 30px !important;
+	}
+	.paragraph {
+		line-height: 20px !important;
+	}
+	.center-logo img {
+		width: 25% !important;
+	}
+	.navbar-brand img{
+		width: 50% !important;
+		padding-left: 20px;
+	}
+	.contact-col-none{
+		display: none !important;
+	}
+	#header .social-details {
+		padding-bottom: 0 !important;
+		padding-right: 20px;
+	}
+	#header .social-details img{
+		width: 30px;
+		
+	}
+	.next-btn-wrapper {
+		padding-top: 0px !important;
+	}
+	.banner__content-box{
+		padding: 10px !important;
+	}
+	.banner__content {
+		width: 100% !important;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.next-btn {
+		padding: 10px 10px !important;
+		font-size: 14px;
+	}
+	.banner .heading {
+		padding-bottom: 0px !important;
+	}
+	.heading--blue-after::after {
+		width: 35px !important;
+		height: 40px !important;
+	}
+	.footer-main p {
+		padding: 20px 0 !important;
+	}
+	.social-details{
+		padding-bottom: 20px;
+	}
+	.contact-wrapper ul {
+		justify-content: start !important;
+	}
+	.contact-wrapper ul a, .contact-wrapper ul p {
+		font-size: 18px !important;
+	}
+	.footer-contact-col{
+		flex-direction: column;
+	}
+	.contact-wrapper{
+		border: 0 !important;
+	}
+	.news-col{
+		flex-direction: column;
+	}
+	.facility-grid,.process-grid{
+		display: flex !important;
+		flex-direction: column;
+	}
+	.facility-bottom {
+		top:  0 !important;
+	}
+	.heading {
+		font-size: 25px !important;
+		line-height: 30px !important;
+	}
+	.news-all{
+		flex-direction: column;
+	}
+	.news-item-wrapper{
+		width: 100% !important;
+	}
+	.advertistment-slider .owl-next {
+		right: 0 !important;
+	}
+	.advertistment-slider .owl-prev {
+		left: 0 !important;
+	}
+	.vedio-slider .owl-next {
+		right: 0 !important;
+	}
+	.vedio-slider .owl-prev {
+		left: 0 !important;
+	}
+	.path {
+		display: none;
+	}
+	.process-grid__content {
+		position: relative;
+		top: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+		right: auto !important;
+	}
+	.section-simple-padding-bottom {
+		padding-bottom: 50px !important;
+	}
+	.director-wrap{
+		flex-direction: column;
+	}
+	.banner-content {
+		width: 100% !important;
+	}
+
+	.banner-heading {
+		font-size: 25px !important;
+	}
+	.footer-wrap-col{
+		flex-direction: column;
+	}
+	.contact-wrapper {
+		width: 100% !important;
+	}
+	.contact-wrapper {
+		justify-content: flex-start !important;
+	}
+	.tretaments li {
+		width: 100% !important;
+	}
+	#pills-tabContent .news-main-wrapper .news-item-wrapper{
+		flex-direction: column;
+	}
+	.news-inner-sec {
+		width: 100% !important;
+	}
+	.footer-main{
+		background-color: var(--main-color);
+	}
+	.footer-main {
+		padding: 50px 0 50px 0 !important;
+	}
+	.career-sec #v-pills-tab,.career-sec .tab-content {
+		width: 100% !important;
+	}
+	
+	.carerr-col{
+		flex-direction: column;
+	}
+	#v-pills-tab{
+		padding: 20px;
+	}
+	.copyright{
+		text-align: center;
+	}
+	.contact-details-box li a, .contact-details-box li p{
+		font-size: 18px !important;
+	}
+	.section-simple-padding-top {
+		padding-top: 50px !important;
+	}
+	.banner-paragraph {
+		font-size: 20px !important;
+	}
+	.about-us-img{
+		padding-bottom: 20px;
+	}
+	.dropdown-menu{
+		text-align: center;
+	}
+	#pills-tab .nav-link.active,#pills-tab .nav-link {
+		height: 100%;
+	}
+	#pills-tab .nav-link.active::after {
+		left: 27% !important;
+	}
+	.specialist-new-wrapper .specialist-wrapper{
+		justify-content: flex-start !important;
+	}
+	.footer-main-col{
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	}
+	.scroll-element {
+		--i:0 !important;
+	}
+}
+
+@media only screen and (min-width:991px) {
+	#cff.cff-masonry .cff-item:first-child, #cff.cff-masonry .cff-item{
+		min-height: 700px;
+	}
+	
+  }
+

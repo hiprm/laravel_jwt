@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "923a42a4-2ae3-4eee-bf35-3ca85d215cfd",
+		"name": "RN Health",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Doctor",
+					"item": [
+						{
+							"name": "Create Doctor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctor_name\": \"\",\r\n    \"nic\": \"\",\r\n    \"qulification\": [\r\n        {\r\n            \"number\": 1,\r\n            \"name\": \"one\"\r\n        },\r\n        {\r\n            \"number\": 2,\r\n            \"name\": \"two\"\r\n        }\r\n    ],\r\n    \"services\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"phone_numbers\": [\r\n        \"0778361538\",\r\n        \"0555610115\",\r\n        \"0775049469\"\r\n    ],\r\n    \"email\" : \"test@gmail.com\",\r\n    \"user_name\" : \"doc1\",\r\n    \"password\" :\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/create_doctor",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"create_doctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Doctor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctor_name\": \"\",\r\n    \"nic\": \"\",\r\n    \"qulification\": [\r\n        {\r\n            \"number\": 1,\r\n            \"name\": \"one\"\r\n        },\r\n        {\r\n            \"number\": 2,\r\n            \"name\": \"two\"\r\n        }\r\n    ],\r\n    \"services\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"phone_numbers\": [\r\n        \"0778361538\",\r\n        \"0555610115\",\r\n        \"0775049469\"\r\n    ],\r\n    \"email\": \"test@gmail.com\",\r\n    \"user_name\": \"doc1\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/update/doctor",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"update",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Doctor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctor_id\" : \"1\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delete_doctor",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delete_doctor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Doctor Service",
+					"item": [
+						{
+							"name": "Create Service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"service\" : \"service name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/create_service",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"create_service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 1,\r\n    \"service\" : \"service name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/update_service",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"update_service"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Time Slot",
+					"item": [
+						{
+							"name": "Create Sloat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctor_id\":\"\",\r\n    \"start_time\" : \"\",\r\n    \"end_time\" : \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/create_slot",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"create_slot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Slot",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"time_slot_id\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delete_slot",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delete_slot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Book Time Slot",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patient_nic\" : \"\",\r\n    \"time_slot_id\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/book_time_slot",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"book_time_slot"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Web APIs",
+					"item": []
+				}
+			]
+		}
+	]
+}
